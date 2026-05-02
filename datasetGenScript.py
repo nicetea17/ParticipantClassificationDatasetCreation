@@ -5,12 +5,12 @@ import geminiPrompts as p
 
 #export GEMINI_API_KEY=""
 
-INPUT_FOLDER = Path("base_images/open_spaceXall_participants")
-OUTPUT_FOLDER = Path("generated_images/zoom")
+INPUT_FOLDER = Path("base_images")
+OUTPUT_FOLDER = Path("generated_images")
 MODEL_NAME = "gemini-2.5-flash-image"
-MAX_IMAGES = 25
+MAX_IMAGES = 50
 
-PROMPT = p.SOME_NON_PROMPT #depends on whether the generated image is filled with participants or includes non-participants
+PROMPT = p.MOST_NON_PROMPT #depends on whether the generated image is filled with participants, includes some non-participants, or includes mostly non-participants
 def main():
     if not INPUT_FOLDER.exists():
         raise FileNotFoundError(f"Input folder not found: {INPUT_FOLDER}")
