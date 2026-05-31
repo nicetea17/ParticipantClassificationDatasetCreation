@@ -2,4 +2,7 @@
 base_images
 all_bounding_boxes.json
 generated_images
-generated_images.zip
+gene.env
+venv/
+__pycache__/
+output/
